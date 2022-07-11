@@ -1,8 +1,8 @@
-node_modules
-*.log*
-.nuxt
-.nitro
-.cache
-.output
-.env
-dist
+!/.idea
+/.idea/*
+!/.idea/copyright
+!/.idea/scopes
+
+/.nuxt
+
+/node_modules
