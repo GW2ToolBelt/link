@@ -3,6 +3,8 @@
 
 ## License
 
+#### link
+
 ```
 Copyright (c) 2022 Leon Linhart
 
@@ -23,3 +25,16 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 ```
+
+--------------------------------------------------------------------------------
+
+#### Guild Wars 2
+
+> © 2021 NCSOFT Corporation. All rights reserved. NCSOFT, ArenaNet, the
+interlocking NC logo, Aion, Lineage II, Guild Wars, Guild Wars 2: Heart of
+Thorns, Guild Wars 2: Path of Fire, Blade & Soul, and all associated logos,
+designs, and composite marks are trademarks or registered trademarks of NCSOFT
+Corporation. All other trademarks are the property of their respective owners.
+
+As taken from [NCSOFT 2 Content Terms of Use](https://us.ncsoft.com/en-gb/legal/ncsoft/content-terms-of-use)
+on 2022-07-12 12:36 CET.
