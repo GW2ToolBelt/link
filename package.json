@@ -8,6 +8,7 @@
     "preview": "nuxt preview"
   },
   "dependencies": {
+    "gw2api-client": "^7.5.2",
     "nuxt": "^2.15.8"
   },
   "devDependencies": {
