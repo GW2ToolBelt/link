@@ -32,7 +32,7 @@ export default {
     ],
 
     plugins: [
-        "~/plugins/gw2-api.ts"
+        "~/plugins/gw2-api.client.ts"
     ],
 
     router: {
