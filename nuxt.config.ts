@@ -32,10 +32,6 @@ export default {
         "@nuxtjs/i18n"
     ],
 
-    plugins: [
-        "~/plugins/gw2-api.client.ts"
-    ],
-
     router: {
         extendRoutes(routes, resolve) {
             routes.push({

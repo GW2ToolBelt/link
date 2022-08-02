@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@nuxtjs/i18n": "^7.2.3",
-    "gw2api-client": "^7.5.2",
     "nuxt": "^2.15.8"
   },
   "devDependencies": {
