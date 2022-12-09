@@ -1,14 +1,14 @@
-export default {
-    buildModules: [
-        "@nuxt/typescript-build",
-        "@nuxtjs/vuetify"
-    ],
-
+export default defineNuxtConfig ({
     components: true,
 
-    head: {
-        title: "GW2TB Link"
+    build: {
+        transpile: ["vuetify"],
     },
+
+    css: [
+        "vuetify/lib/styles/main.sass",
+        "@mdi/font/css/materialdesignicons.min.css"
+    ],
 
     i18n: {
         locales: [
@@ -28,17 +28,10 @@ export default {
     },
 
     modules: [
-        "@nuxtjs/axios",
         "@nuxtjs/i18n"
     ],
 
-    router: {
-        extendRoutes(routes, resolve) {
-            routes.push({
-                name: "catchall",
-                path: "*",
-                component: resolve(__dirname, "pages/index.vue")
-            })
-        }
+    typescript: {
+        strict: true
     }
-};
+})
