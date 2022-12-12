@@ -9,7 +9,7 @@
     "start": "nuxt start"
   },
   "dependencies": {
-    "@mdi/font": "^7.0.96",
+    "@mdi/font": "^7.1.96",
     "@nuxtjs/i18n": "^8.0.0-beta.7",
     "nuxt": "^3.0.0",
     "sass": "^1.56.2",
