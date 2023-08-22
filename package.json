@@ -9,10 +9,10 @@
     "start": "nuxt start"
   },
   "dependencies": {
-    "@mdi/font": "^7.0.96",
-    "@nuxtjs/i18n": "^8.0.0-beta.7",
-    "nuxt": "^3.3.3",
-    "sass": "^1.63.4",
-    "vuetify": "^3.1.8"
+    "@mdi/font": "^7.2.96",
+    "@nuxtjs/i18n": "^8.0.0-rc.3",
+    "nuxt": "^3.6.5",
+    "sass": "^1.66.1",
+    "vuetify": "^3.3.13"
   }
 }
