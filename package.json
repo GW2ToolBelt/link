@@ -2,17 +2,27 @@
   "name": "link",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "start": "nuxt start"
+    "build": "nuxi build",
+    "clean": "nuxi cleanup",
+    "dev": "nuxi dev",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview",
+    "postinstall": "nuxi prepare",
+    "test": "npx playwright test --browser=all"
   },
-  "dependencies": {
+  "devDependencies": {
     "@mdi/font": "^7.2.96",
+    "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/i18n": "^8.0.0-rc.3",
+    "@playwright/test": "^1.37.1",
+    "@types/node": "18.15.3",
     "nuxt": "^3.6.5",
     "sass": "^1.66.1",
+    "typescript": "5.1.6",
+    "vue-tsc": "^1.8.8",
     "vuetify": "^3.3.13"
+  },
+  "dependencies": {
+
   }
 }

@@ -1,8 +1,18 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig ({
-    components: true,
+    srcDir: "src",
+
+    app: {
+        baseURL: "/"
+    },
 
     build: {
         transpile: ["vuetify"],
+    },
+
+    colorMode: {
+        preference: "system",
+        fallback: "light"
     },
 
     css: [
@@ -21,17 +31,20 @@ export default defineNuxtConfig ({
         strategy: "no_prefix",
 
         detectBrowserLanguage: {
-            fallbackLocale:  "en",
+            fallbackLocale: "en",
             cookieKey: "locale",
             cookieSecure: true
         }
     },
 
     modules: [
+        "@nuxtjs/color-mode",
         "@nuxtjs/i18n"
     ],
 
     typescript: {
-        strict: true
+        shim: false,
+        strict: true,
+        typeCheck: true
     }
 })

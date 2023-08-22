@@ -1,5 +1,12 @@
 # GW2TB Link
 
+[link.gw2tb.com](https://link.gw2tb.com) is a simple utility
+
+
+## Building from Source
+
+
+
 
 ## License
 
