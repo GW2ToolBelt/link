@@ -4,5 +4,11 @@
 !/.idea/scopes
 
 /.nuxt
+/.nitro
+/.cache
+/.output
+/.env
 
+/dist
 /node_modules
+/preview
