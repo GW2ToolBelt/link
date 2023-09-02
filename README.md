@@ -1,11 +1,12 @@
 # GW2TB Link
 
-[link.gw2tb.com](https://link.gw2tb.com) is a simple utility
+[link.gw2tb.com](https://link.gw2tb.com) is a simple utility for en- and
+decoding Guild Wars 2 [chat links](https://wiki.guildwars2.com/wiki/Chat_link_format).
 
 
 ## Building from Source
 
-
+!TODO
 
 
 ## License
@@ -13,7 +14,7 @@
 #### link
 
 ```
-Copyright (c) 2022 Leon Linhart
+Copyright (c) 2022-2023 Leon Linhart
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
