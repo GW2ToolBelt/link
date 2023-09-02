@@ -56,7 +56,7 @@
     <v-footer :app="true" absolute color="rgba(255, 255, 255, 0.85)">
       <v-row no-gutters justify="space-between">
         <v-col align-self="center" style="user-select: none">
-          <v-btn class="text-h6" variant="plain" :href="urlHomepage" :ripple="false" style="padding: 0">
+          <v-btn class="text-h6" variant="plain" :href="urlHomepage" :disabled=true :ripple="false" style="padding: 0">
             GW2TB
           </v-btn>
         </v-col>
@@ -93,7 +93,7 @@ const toggle = ref("GW2TB Link")
 
 const urlHomepage = "https://gw2tb.com"
 const urlSocialsGitHub = "https://github.com/GW2ToolBelt/link"
-const urlSocialsTwitter = "https://twitter.com/GW2ToolBelt"
+// const urlSocialsTwitter = "https://twitter.com/GW2ToolBelt"
 
 const linkTypes = [
   { type: "Coin", component: ChatLinkOutfit },
