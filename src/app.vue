@@ -111,12 +111,12 @@ useHead({
 const chatLink = ref("[&foo]")
 
 function copyChatLink() {
-  // TODO impl
+  navigator.clipboard.writeText(chatLink.value);
 }
 
-watch(chatLink, currentValue => {
-  history.replaceState(undefined, "", currentValue)
-})
+watch(chatLink, value => {
+  history.replaceState(undefined, "", value)
+});
 </script>
 
 <style>
