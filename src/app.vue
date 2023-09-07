@@ -11,7 +11,7 @@
             <v-text-field
                 v-model="chatLink"
                 single-line
-                class="grow"
+                class="chatlink-field grow"
                 label="Chat link"
                 variant="underlined"
             />
@@ -118,6 +118,12 @@ watch(chatLink, value => {
   history.replaceState(undefined, "", value)
 });
 </script>
+
+<style scoped>
+.chatlink-field:deep(input) {
+  font-family: monospace;
+}
+</style>
 
 <style>
 html {
