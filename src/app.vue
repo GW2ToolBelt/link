@@ -89,12 +89,12 @@ import {ref} from "vue";
 
 import ChatLinkOutfit from "./components/ChatLinkOutfit.vue"
 
-const title = ref("GW2TB Link")
-const toggle = ref("GW2TB Link")
+const title = ref("GW2TB Link");
+const toggle = ref("GW2TB Link");
 
-const urlHomepage = "https://gw2tb.com"
-const urlSocialsGitHub = "https://github.com/GW2ToolBelt/link"
-// const urlSocialsTwitter = "https://twitter.com/GW2ToolBelt"
+const urlHomepage = "https://gw2tb.com";
+const urlSocialsGitHub = "https://github.com/GW2ToolBelt/link";
+// const urlSocialsTwitter = "https://twitter.com/GW2ToolBelt";
 
 const linkTypes = [
   { type: "Coin", component: ChatLinkOutfit },
@@ -106,10 +106,9 @@ const linkType = ref(linkTypes[0])
 
 useHead({
   title
-})
+});
 
-
-const chatLink = ref("[&foo]")
+const chatLink = ref("");
 
 function copyChatLink() {
   navigator.clipboard.writeText(chatLink.value);
@@ -139,7 +138,7 @@ const chatLinkValidationRules = [
 ];
 
 watch(chatLink, value => {
-  history.replaceState(undefined, "", value)
+  history.replaceState(undefined, "", value);
 });
 </script>
 
