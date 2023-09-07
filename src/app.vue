@@ -13,6 +13,7 @@
                 single-line
                 class="chatlink-field grow"
                 label="Chat link"
+                :rules="chatLinkValidationRules"
                 variant="underlined"
             />
 
@@ -113,6 +114,20 @@ const chatLink = ref("[&foo]")
 function copyChatLink() {
   navigator.clipboard.writeText(chatLink.value);
 }
+
+function isChatLink(value: string): boolean {
+    return value.match("^\\[&[-A-Za-z0-9+/]*={0,3}\\]$") !== null;
+}
+
+const chatLinkValidationRules = [
+    (value: string) => {
+        if (value && !isChatLink(value)) {
+            return "Invalid chat link format";
+        }
+
+        return true;
+    }
+];
 
 watch(chatLink, value => {
   history.replaceState(undefined, "", value)
