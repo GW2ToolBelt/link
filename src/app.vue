@@ -7,7 +7,7 @@
             elevation="8"
             style="width: 25vw; min-width: 350px"
         >
-          <v-toolbar flat class="ps-4" color="transparent">
+          <v-toolbar flat class="ps-4 pb-4" color="transparent">
             <v-text-field
                 v-model="chatLink"
                 single-line
@@ -113,6 +113,15 @@ const chatLink = ref("[&foo]")
 
 function copyChatLink() {
   navigator.clipboard.writeText(chatLink.value);
+}
+
+function getLinkTypeName(type: string) {
+    switch (type) {
+      case "item": return "Item";
+      case "skin": return "Skin";
+      case "outfit": return "Outfit";
+      default: return type;
+    }
 }
 
 function isChatLink(value: string): boolean {
