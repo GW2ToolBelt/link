@@ -19,7 +19,7 @@
     "nuxt": "^3.7.2",
     "sass": "^1.66.1",
     "typescript": "5.2.2",
-    "vue-tsc": "^1.8.10",
+    "vue-tsc": "^1.8.11",
     "vuetify": "^3.3.16"
   },
   "dependencies": {
