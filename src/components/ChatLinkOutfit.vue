@@ -1,45 +1,36 @@
 <template>
   <div class="d-flex align-center">
-    <v-img
-        class="elevation-2 mb-1 me-1 mt-1"
-        :lazy-src="iconSrc"
-        max-height="48px"
-        max-width="48px"
+    <v-skeleton-loader
+      :loading="loading"
+      class="elevation-2 mb-1 me-1 mt-1"
+      type="image"
+      height="48px"
+      width="48px"
     >
-      <template v-slot:placeholder>
-        <v-skeleton-loader
-          class="mx-auto"
-          type="image"
-        />
-      </template>
-    </v-img>
+      <v-img :src="iconSrc" width="48px" height="48px" @loadstart="loading = true" @load="loading = false" />
+    </v-skeleton-loader>
 
     <v-combobox
-        :v-model="value"
-        :items="gameOutfits"
-        :label="label"
-        variant="underlined"
+      v-model="outfit"
+      :items="gameOutfits"
+      :label="label"
+      :return-object="true"
+      variant="underlined"
     />
   </div>
 </template>
 
 <script setup lang="ts">
-import { VSkeletonLoader } from "vuetify/labs/VSkeletonLoader";
 
 const iconSrc = ref("https://wiki.guildwars2.com/images/3/38/Eternity.png")
-const value = ref("foo")
 const label = ref("Outfit")
 
-const gameOutfits = ref([{
-  id: "0",
-  title: "foobar"
-}]);
+const gameOutfits = ref([0, 1, 2]);
 
+const loading = ref();
 
-const gameOutfitNames = ref(new Map())
-const selectedOutfit = ref(undefined)
-
-const chatLink = ref("[&foo]")
-
-// const { data: outfits } = await useFetch(() => "data/outfits/outfits.json");
+function getOutfitName(id: integer): string {
+  if (id == 0) return "foobar";
+  return id + "";
+}
 </script>
