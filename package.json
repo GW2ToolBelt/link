@@ -11,7 +11,7 @@
     "test": "npx playwright test --browser=all"
   },
   "devDependencies": {
-    "@mdi/font": "^7.3.67",
+    "@mdi/font": "^7.4.47",
     "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/i18n": "^8.0.0-rc.5",
     "@playwright/test": "^1.39.0",
