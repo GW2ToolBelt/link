@@ -57,7 +57,7 @@
     <v-footer app style="width: 100%" absolute color="rgba(255, 255, 255, 0.85)">
       <v-row no-gutters justify="space-between">
         <v-col align-self="center" style="user-select: none">
-          <v-btn class="text-h6" variant="plain" :href="urlHomepage" :disabled=true :ripple="false" style="padding: 0">
+          <v-btn class="text-h6" variant="plain" :href="urlHomepage" :ripple="false" style="padding: 0">
             GW2TB
           </v-btn>
         </v-col>
@@ -92,7 +92,10 @@ import ChatLinkOutfit from "./components/ChatLinkOutfit.vue"
 const title = ref("GW2TB Link");
 const toggle = ref("GW2TB Link");
 
-const urlHomepage = "https://gw2tb.com";
+// TODO Update the homepage URL once the homepage is actually live
+// const urlHomepage = "https://gw2tb.com";
+const urlHomepage = "https://github.com/GW2ToolBelt";
+
 const urlSocialsGitHub = "https://github.com/GW2ToolBelt/link";
 // const urlSocialsTwitter = "https://twitter.com/GW2ToolBelt";
 
