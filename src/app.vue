@@ -54,7 +54,7 @@
       </div>
     </v-main>
 
-    <v-footer :app="true" absolute color="rgba(255, 255, 255, 0.85)">
+    <v-footer app style="width: 100%" absolute color="rgba(255, 255, 255, 0.85)">
       <v-row no-gutters justify="space-between">
         <v-col align-self="center" style="user-select: none">
           <v-btn class="text-h6" variant="plain" :href="urlHomepage" :disabled=true :ripple="false" style="padding: 0">
