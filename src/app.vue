@@ -140,8 +140,25 @@ const chatLinkValidationRules = [
     }
 ];
 
+/* Automatically sync the encoded chat link to the browser's history. */
 watch(chatLink, value => {
   history.replaceState(undefined, "", value);
+});
+
+/* Initialize the form with the chat link taken from the path portion of the current resource. */
+onMounted(() => {
+  if (route.path) {
+    const path = route.path.substring(1); // Removes the '/' prefix
+    chatLink.value = path;
+
+    if (isChatLink(path)) { // Only attempt to decode the path if the format is correct
+      const initialChatLink = decode(path);
+
+      if (initialChatLink) {
+        linkType.value = initialChatLink.type;
+      }
+    }
+  }
 });
 </script>
 
