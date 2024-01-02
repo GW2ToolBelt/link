@@ -1,16 +1,18 @@
 <template>
   <div class="d-flex align-center">
-    <v-img class="elevation-2  mb-1 me-2 mt-1" max-width="48px" height="48px" max-height="48px" @loadstart="loading = true" @load="loading = false">
+    <v-img class="elevation-2  mb-1 me-2 mt-1" max-width="48px" height="48px" max-height="48px" :src="outfitIconSource" @loadstart="outfitIconLoading = true" @load="outfitIconLoading = false">
       <template v-slot:placeholder>
-        <v-skeleton-loader class="rounded-0" type="image" :loading="loading" width="100%" height="100%" />
+        <v-skeleton-loader class="rounded-0" type="image" :loading="outfitIconLoading" width="100%" height="100%" />
       </template>
     </v-img>
 
     <v-combobox
       v-model="outfit"
       :items="gameOutfits"
-      :label="label"
-      :return-object="true"
+      item-title="name"
+      item-value="id"
+      :label="$t('linkTypeOutfit')"
+      :return-object="false"
       variant="underlined"
     />
   </div>
@@ -46,19 +48,16 @@ watch(outfit, async (outfit) => {
   }
 });
 
+const { data: outfits } = useFetch<{
+  id: integer,
+  icon: string
+}[]>("/data/outfits/index.json", {
+  lazy: true,
+  server: false
+});
 
+const gameOutfits = computed<any[]>(() => outfits.value ?? []);
 
-
-
-const iconSrc = ref("https://wiki.guildwars2.com/images/3/38/Eternity.png")
-const label = ref("Outfit")
-
-const gameOutfits = ref([0, 1, 2]);
-
-const loading = ref(false);
-
-function getOutfitName(id: integer): string {
-  if (id == 0) return "foobar";
-  return id + "";
-}
+const outfitIconLoading = ref(false);
+const outfitIconSource = computed<string>(() => gameOutfits.value.find(it => outfit.value == it.id)?.icon ?? "/data/placeholder.png");
 </script>
