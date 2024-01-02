@@ -17,6 +17,38 @@
 </template>
 
 <script setup lang="ts">
+import type {IdLinkMeta} from "gw2e-chat-codes/src/encode/encodeIdLink";
+
+import {encode} from "gw2e-chat-codes";
+import {integer} from "vscode-languageserver-types";
+
+const props = defineProps<{
+  chatLink: IdLinkMeta | undefined
+}>();
+
+const outfit = ref(0);
+
+watch(() => props.chatLink, async (chatLink) => {
+  outfit.value = <number>(chatLink as IdLinkMeta).id ?? 0;
+});
+
+const emit = defineEmits<{
+  updateChatLink: [value: string]
+}>();
+
+watch(outfit, async (outfit) => {
+  const encodedChatLink = encode("outfit", outfit);
+
+  if (encodedChatLink) {
+    emit("updateChatLink", encodedChatLink);
+  } else {
+    console.error(`Failed to encode outfit ID: ${outfit}`);
+  }
+});
+
+
+
+
 
 const iconSrc = ref("https://wiki.guildwars2.com/images/3/38/Eternity.png")
 const label = ref("Outfit")

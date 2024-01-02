@@ -17,7 +17,7 @@
                 variant="underlined"
             />
 
-            <v-btn icon variant="plain" @click="copyChatLink" >
+            <v-btn icon variant="plain" @click="copyChatLink">
               <v-icon>mdi-content-copy</v-icon>
             </v-btn>
           </v-toolbar>
@@ -46,9 +46,10 @@
                 variant="underlined"
             />
 
-            <v-expand-transition mode="out-in" origin>
-              <ChatLinkOutfit @input="chatLink = $event" />
-            </v-expand-transition>
+<!--            <v-expand-transition mode="out-in" origin>-->
+              <ChatLinkOutfit v-if="linkType == 'outfit'" :chat-link="<IdLinkMeta>chatLinkObj" @updateChatLink="chatLink = $event" />
+<!--              <ChatLinkSkin v-if="linkType == 'skin'" :chat-link="chatLink" @updateChatLink="chatLink = $event" />-->
+<!--            </v-expand-transition>-->
           </v-card-text>
         </v-card>
       </div>
@@ -85,12 +86,14 @@
 </template>
 
 <script setup lang="ts">
+import type {IdLinkMeta} from "gw2e-chat-codes/src/encode/encodeIdLink";
+
+import {decode} from "gw2e-chat-codes";
 import {ref} from "vue";
 
-import ChatLinkOutfit from "./components/ChatLinkOutfit.vue"
+const route = useRoute();
 
 const title = ref("GW2TB Link");
-const toggle = ref("GW2TB Link");
 
 // TODO Update the homepage URL once the homepage is actually live
 // const urlHomepage = "https://gw2tb.com";
@@ -100,18 +103,19 @@ const urlSocialsGitHub = "https://github.com/GW2ToolBelt/link";
 // const urlSocialsTwitter = "https://twitter.com/GW2ToolBelt";
 
 const linkTypes = [
-  { type: "Coin", component: ChatLinkOutfit },
-  { type: "Item", component: ChatLinkOutfit },
-  { type: "Outfit", component: ChatLinkOutfit }
-]
+    "item",
+    "skin",
+    "outfit"
+];
 
-const linkType = ref(linkTypes[0])
+const linkType = ref();
 
 useHead({
   title
 });
 
 const chatLink = ref("");
+const chatLinkObj = computed(() => decode(chatLink.value));
 
 function copyChatLink() {
   navigator.clipboard.writeText(chatLink.value);
