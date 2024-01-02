@@ -26,8 +26,7 @@
             <v-select
                 v-model="linkType"
                 :items="linkTypes"
-                item-title="type"
-                item-value="type"
+                :item-title="getLinkTypeName"
                 persistent-hint
                 return-object
                 variant="underlined"
