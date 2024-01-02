@@ -24,5 +24,8 @@
   },
   "dependencies": {
     "gw2e-chat-codes": "^1.4.2"
+  },
+  "resolutions": {
+    "string-width": "^4.2.3"
   }
 }
