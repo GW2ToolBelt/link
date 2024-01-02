@@ -23,19 +23,6 @@
           </v-toolbar>
 
           <v-card-text class="pb-2 pt-0 ps-4 pe-4">
-            <div class="d-flex justify-center">
-              <v-btn-toggle
-                v-model="toggle"
-                color="primary"
-                mandatory
-                variant="text"
-              >
-                <v-btn @click="$i18n.setLocale('de')">🇩🇪</v-btn>
-                <v-btn @click="$i18n.setLocale('en')">🇺🇸</v-btn>
-                <v-btn>🇪🇸</v-btn>
-              </v-btn-toggle>
-            </div>
-
             <v-select
                 v-model="linkType"
                 :items="linkTypes"
