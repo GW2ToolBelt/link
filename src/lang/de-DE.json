@@ -1,0 +1,13 @@
+{
+    "linkTypeBuildTemplate": "Build-Vorlage",
+    "linkTypeCoin": "Münzen",
+    "linkTypeItem": "Gegenstand",
+    "linkTypeNPCText": "NPC Text",
+    "linkTypeOutfit": "Kleidungsset",
+    "linkTypePoI": "Kartenmarkierung",
+    "linkTypeRecipe": "Rezept",
+    "linkTypeSkill": "Fertigkeit",
+    "linkTypeSkin": "Skin",
+    "linkTypeTrait": "Eigenschaft",
+    "linkTypeWvWObjective": "WvW Ziel"
+}

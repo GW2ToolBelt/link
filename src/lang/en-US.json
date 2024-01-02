@@ -1,0 +1,13 @@
+{
+    "linkTypeBuildTemplate": "Build Template",
+    "linkTypeCoin": "Coins",
+    "linkTypeItem": "Item",
+    "linkTypeOutfit": "Outfit",
+    "linkTypeNPCText": "NPC Text",
+    "linkTypePoI": "Map Marker",
+    "linkTypeRecipe": "Recipe",
+    "linkTypeSkill": "Skill",
+    "linkTypeSkin": "Skin",
+    "linkTypeTrait": "Trait",
+    "linkTypeWvWObjective": "WvW Objective"
+}
