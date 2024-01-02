@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex align-center">
-    <v-img class="elevation-2  mb-1 me-1 mt-1" max-width="48px" height="48px" max-height="48px" @loadstart="loading = true" @load="loading = false">
+    <v-img class="elevation-2  mb-1 me-2 mt-1" max-width="48px" height="48px" max-height="48px" @loadstart="loading = true" @load="loading = false">
       <template v-slot:placeholder>
         <v-skeleton-loader class="rounded-0" type="image" :loading="loading" width="100%" height="100%" />
       </template>
