@@ -5811,10 +5811,10 @@ vue@^3.4.21:
     "@vue/server-renderer" "3.4.21"
     "@vue/shared" "3.4.21"
 
-vuetify@^3.5.11:
-  version "3.5.11"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-3.5.11.tgz#9e5b628544e736de0b7f236b704539d544588152"
-  integrity sha512-us5I0jyFwIQYG4v41PFmVMkoc/oJddVT4C2RFjJTI99ttigbQ92gsTeG5SB8BPfmfnUS4paR5BedZwk6W3KlJw==
+vuetify@^3.5.12:
+  version "3.5.12"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-3.5.12.tgz#bd354b67458317b0f3a0014aa9839ca4762d7923"
+  integrity sha512-6Dv6hSQH4NpoIFSEn+GouexKZYMCgMhB1x/Bepp7vnDgnpy6xGj2OgNOp/eBTPiaNrsX9knMv310c2Y9FSEllw==
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
@@ -5868,6 +5868,7 @@ wide-align@^1.1.2:
     string-width "^1.0.2 || 2 || 3 || 4"
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
