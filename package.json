@@ -20,7 +20,7 @@
     "sass": "^1.74.1",
     "typescript": "5.4.3",
     "vue-tsc": "^1.8.22",
-    "vuetify": "^3.5.14"
+    "vuetify": "^3.5.15"
   },
   "dependencies": {
     "gw2e-chat-codes": "^1.4.2"
