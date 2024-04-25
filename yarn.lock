@@ -974,10 +974,10 @@
     pkg-types "^1.0.3"
     semver "^7.6.0"
 
-"@nuxtjs/i18n@^8.3.0":
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/i18n/-/i18n-8.3.0.tgz#4d038cfa94b981c09b4916b37b9aebf2a06cd91b"
-  integrity sha512-/2g4zYwBwHwIVJitu/i5zP73G4F9xH394Uq0RbfOGc34YxscN+B2kMnuPL8XXM9zThdMVj9ctHInQXXtr62CLg==
+"@nuxtjs/i18n@^8.3.1":
+  version "8.3.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/i18n/-/i18n-8.3.1.tgz#bfa6c92991f842ec4df16573dd5cb210907d18be"
+  integrity sha512-VHnnjFTTep2oC5++61WY06y4c/h943NyHQh1CRUJQvjsdbGSMX3WQjMGk+X05a3pyPFN70aq0YbgtsEoEoTEjQ==
   dependencies:
     "@intlify/h3" "^0.5.0"
     "@intlify/shared" "^9.9.0"
@@ -3515,12 +3515,7 @@ klona@^2.0.6:
   resolved "https://registry.yarnpkg.com/klona/-/klona-2.0.6.tgz#85bffbf819c03b2f53270412420a4555ef882e22"
   integrity sha512-dhG34DXATL5hSxJbIexCft8FChFXtmskoZYnoPWjXQuebWYCNkVeV3KkGegCK9CP1oswI/vQibS2GY7Em/sJJA==
 
-knitwork@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/knitwork/-/knitwork-1.0.0.tgz#38d124dead875bee5feea1733632295af58a49d2"
-  integrity sha512-dWl0Dbjm6Xm+kDxhPQJsCBTxrJzuGl0aP9rhr+TG8D3l+GL90N8O8lYUi7dTSAN2uuDqCtNgb6aEuQH5wsiV8Q==
-
-knitwork@^1.1.0:
+knitwork@^1.0.0, knitwork@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/knitwork/-/knitwork-1.1.0.tgz#d8c9feafadd7ee744ff64340b216a52c7199c417"
   integrity sha512-oHnmiBUVHz1V+URE77PNot2lv3QiYU2zQf1JjOVkMt3YDKGbu8NAFr+c4mcNOhdsGrB/VpVbRwPwhiXrPhxQbw==
