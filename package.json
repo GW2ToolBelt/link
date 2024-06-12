@@ -16,7 +16,7 @@
     "@nuxtjs/i18n": "^8.3.1",
     "@playwright/test": "^1.44.1",
     "@types/node": "18.19.34",
-    "nuxt": "^3.11.1",
+    "nuxt": "^3.12.1",
     "sass": "^1.77.4",
     "typescript": "5.4.5",
     "vue-tsc": "^1.8.22",
