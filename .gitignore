@@ -1,16 +1,15 @@
+/.gradle
+
 !/.idea
 /.idea/*
 !/.idea/copyright
+!/.idea/inspectionProfiles
 !/.idea/runConfigurations
 !/.idea/scopes
 !/.idea/icon.png
 
-/.nuxt
-/.nitro
-/.cache
-/.output
-/.env
+/.kotlin
 
-/dist
+/build
+
 /node_modules
-/preview

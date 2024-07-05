@@ -14,7 +14,7 @@ decoding Guild Wars 2 [chat links](https://wiki.guildwars2.com/wiki/Chat_link_fo
 #### link
 
 ```
-Copyright (c) 2022-2023 Leon Linhart
+Copyright (c) 2022-2024 Leon Linhart
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -39,11 +39,11 @@ SOFTWARE.
 
 #### Guild Wars 2
 
-> © 2021 NCSOFT Corporation. All rights reserved. NCSOFT, ArenaNet, the
-interlocking NC logo, Aion, Lineage II, Guild Wars, Guild Wars 2: Heart of
-Thorns, Guild Wars 2: Path of Fire, Blade & Soul, and all associated logos,
-designs, and composite marks are trademarks or registered trademarks of NCSOFT
-Corporation. All other trademarks are the property of their respective owners.
+> © ArenaNet LLC. All rights reserved. NCSOFT, ArenaNet, Guild Wars, Guild
+> Wars 2, GW2, Guild Wars 2: Heart of Thorns, Guild Wars 2: Path of Fire, Guild
+> Wars 2: End of Dragons, and Guild Wars 2: Secrets of the Obscure and all
+> associated logos, designs, and composite marks are trademarks or registered
+> trademarks of NCSOFT Corporation.
 
-As taken from [NCSOFT 2 Content Terms of Use](https://us.ncsoft.com/en-gb/legal/ncsoft/content-terms-of-use)
-on 2022-07-12 12:36 CET.
+As taken from [Guild Wars 2 Content Terms of Use](https://www.guildwars2.com/en/legal/guild-wars-2-content-terms-of-use/)
+on 2024-01-23 00:57 CET.
