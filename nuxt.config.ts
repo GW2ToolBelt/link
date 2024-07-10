@@ -15,6 +15,8 @@ export default defineNuxtConfig ({
         fallback: "light"
     },
 
+    compatibilityDate: "2024-07-11",
+
     css: [
         "vuetify/lib/styles/main.sass",
         "@mdi/font/css/materialdesignicons.min.css"
