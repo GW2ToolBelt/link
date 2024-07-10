@@ -14,7 +14,7 @@
     "@mdi/font": "^7.4.47",
     "@nuxtjs/color-mode": "^3.3.3",
     "@nuxtjs/i18n": "^8.2.0",
-    "@playwright/test": "^1.42.1",
+    "@playwright/test": "^1.45.1",
     "@types/node": "18.19.39",
     "nuxt": "^3.11.2",
     "sass": "^1.77.7",
