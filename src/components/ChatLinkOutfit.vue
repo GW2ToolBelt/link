@@ -7,7 +7,8 @@
     </v-img>
 
     <v-combobox
-      v-model="outfit"
+      :model-value="chatLink.data['id']"
+      @update:model-value="id => updateChatLinkData('id', id)"
       :items="gameOutfits"
       item-title="name"
       item-value="id"
@@ -19,37 +20,10 @@
 </template>
 
 <script setup lang="ts">
-import type {IdLinkMeta} from "gw2e-chat-codes/src/encode/encodeIdLink";
-
-import {encode} from "gw2e-chat-codes";
-import {integer} from "vscode-languageserver-types";
-
-const props = defineProps<{
-  chatLink: IdLinkMeta | undefined
-}>();
-
-const outfit = ref(0);
-
-watch(() => props.chatLink, async (chatLink) => {
-  outfit.value = <number>(chatLink as IdLinkMeta).id ?? 0;
-});
-
-const emit = defineEmits<{
-  updateChatLink: [value: string]
-}>();
-
-watch(outfit, async (outfit) => {
-  const encodedChatLink = encode("outfit", outfit);
-
-  if (encodedChatLink) {
-    emit("updateChatLink", encodedChatLink);
-  } else {
-    console.error(`Failed to encode outfit ID: ${outfit}`);
-  }
-});
+const chatLink = useChatLink();
 
 const { data: outfits } = useFetch<{
-  id: integer,
+  id: number,
   icon: string
 }[]>("/data/outfits/index.json", {
   lazy: true,
@@ -59,5 +33,5 @@ const { data: outfits } = useFetch<{
 const gameOutfits = computed<any[]>(() => outfits.value ?? []);
 
 const outfitIconLoading = ref(false);
-const outfitIconSource = computed<string>(() => gameOutfits.value.find(it => outfit.value == it.id)?.icon ?? "/data/placeholder.png");
+const outfitIconSource = computed<string>(() => gameOutfits.value.find(it => chatLink.value.data['id'] == it.id)?.icon ?? "/data/placeholder.png");
 </script>

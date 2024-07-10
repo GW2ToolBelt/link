@@ -9,7 +9,8 @@
         >
           <v-toolbar flat class="ps-4 pb-4" color="transparent">
             <v-text-field
-                v-model="chatLink"
+                :model-value="chatLink.encodedString"
+                @update:model-value="it => updateChatLink(it)"
                 single-line
                 class="chatlink-field grow"
                 label="Chat link"
@@ -24,7 +25,8 @@
 
           <v-card-text class="pb-2 pt-0 ps-4 pe-4">
             <v-select
-                v-model="linkType"
+                :model-value="chatLink.type"
+                @update:model-value="it => updateChatLinkType(it)"
                 :items="linkTypes"
                 :item-title="getLinkTypeName"
                 persistent-hint
@@ -33,7 +35,7 @@
             />
 
 <!--            <v-expand-transition mode="out-in" origin>-->
-              <ChatLinkOutfit v-if="linkType == 'outfit'" :chat-link="<IdLinkMeta>chatLinkObj" @updateChatLink="chatLink = $event" />
+              <ChatLinkOutfit v-if="chatLink.type == 'outfit'" />
 <!--              <ChatLinkSkin v-if="linkType == 'skin'" :chat-link="chatLink" @updateChatLink="chatLink = $event" />-->
 <!--            </v-expand-transition>-->
           </v-card-text>
@@ -72,10 +74,7 @@
 </template>
 
 <script setup lang="ts">
-import type {IdLinkMeta} from "gw2e-chat-codes/src/encode/encodeIdLink";
-
-import {decode} from "gw2e-chat-codes";
-import {ref} from "vue";
+import { ref } from "vue";
 
 const route = useRoute();
 
@@ -94,35 +93,31 @@ const linkTypes = [
     "outfit"
 ];
 
-const linkType = ref();
-
 useHead({
-  title
+    title
 });
 
-const chatLink = ref("");
-const chatLinkObj = computed(() => decode(chatLink.value));
+const chatLink = useChatLink();
 
 function copyChatLink() {
-  navigator.clipboard.writeText(chatLink.value);
+    const chatLink_ = chatLink.value;
+    if (chatLink_.type == null || chatLink_.encodedString == null) return;
+
+    navigator.clipboard.writeText(chatLink_.encodedString);
 }
 
 function getLinkTypeName(type: string) {
     switch (type) {
-      case "item": return "Item";
-      case "skin": return "Skin";
-      case "outfit": return "Outfit";
-      default: return type;
+        case "item": return "Item";
+        case "skin": return "Skin";
+        case "outfit": return "Outfit";
+        default: return type;
     }
-}
-
-function isChatLink(value: string): boolean {
-    return value.match("^\\[&[-A-Za-z0-9+/]*={0,3}\\]$") !== null;
 }
 
 const chatLinkValidationRules = [
     (value: string) => {
-        if (value && !isChatLink(value)) {
+        if (chatLink.value.type == null) {
             return "Invalid chat link format";
         }
 
@@ -130,25 +125,20 @@ const chatLinkValidationRules = [
     }
 ];
 
-/* Automatically sync the encoded chat link to the browser's history. */
+/* Automatically sync the currently encoded chat link to the URL path. */
 watch(chatLink, value => {
-  history.replaceState(undefined, "", value);
+    let fragment: string | null = null;
+    if (value.type != null) fragment = value.encodedString;
+
+    history.replaceState(undefined, "", fragment ?? "/");
 });
 
 /* Initialize the form with the chat link taken from the path portion of the current resource. */
 onMounted(() => {
-  if (route.path) {
-    const path = route.path.substring(1); // Removes the '/' prefix
-    chatLink.value = path;
-
-    if (isChatLink(path)) { // Only attempt to decode the path if the format is correct
-      const initialChatLink = decode(path);
-
-      if (initialChatLink) {
-        linkType.value = initialChatLink.type;
-      }
+    if (route.path) {
+        const path = route.path.substring(1); // Removes the '/' prefix
+        updateChatLink(path);
     }
-  }
 });
 </script>
 
