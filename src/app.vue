@@ -74,6 +74,7 @@
 </template>
 
 <script setup lang="ts">
+import type { CodeType } from "gw2e-chat-codes/src/static";
 import { ref } from "vue";
 
 const route = useRoute();
