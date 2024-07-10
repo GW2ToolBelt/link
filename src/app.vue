@@ -118,7 +118,7 @@ function getLinkTypeName(type: string) {
 
 const chatLinkValidationRules = [
     (value: string) => {
-        if (chatLink.value.type == null) {
+        if (value && chatLink.value.type == null) {
             return "Invalid chat link format";
         }
 
