@@ -8,7 +8,7 @@
 
     <v-combobox
       :model-value="chatLink.data['id']"
-      @update:model-value="id => updateChatLinkData('id', id)"
+      @update:model-value="(id: number) => updateChatLinkData('id', id)"
       :items="gameOutfits"
       item-title="name"
       item-value="id"

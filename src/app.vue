@@ -10,7 +10,7 @@
           <v-toolbar flat class="ps-4 pb-4" color="transparent">
             <v-text-field
                 :model-value="chatLink.encodedString"
-                @update:model-value="it => updateChatLink(it)"
+                @update:model-value="(it: string) => updateChatLink(it)"
                 single-line
                 class="chatlink-field grow"
                 label="Chat link"
@@ -26,7 +26,7 @@
           <v-card-text class="pb-2 pt-0 ps-4 pe-4">
             <v-select
                 :model-value="chatLink.type"
-                @update:model-value="it => updateChatLinkType(it)"
+                @update:model-value="(it: CodeType) => updateChatLinkType(it)"
                 :items="linkTypes"
                 :item-title="getLinkTypeName"
                 persistent-hint
