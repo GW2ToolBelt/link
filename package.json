@@ -13,7 +13,7 @@
   "devDependencies": {
     "@mdi/font": "^7.4.47",
     "@nuxtjs/color-mode": "^3.4.4",
-    "@nuxtjs/i18n": "^8.4.0",
+    "@nuxtjs/i18n": "^8.5.0",
     "@playwright/test": "^1.46.1",
     "@types/node": "18.19.45",
     "nuxt": "^3.12.4",
