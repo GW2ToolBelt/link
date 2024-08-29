@@ -19,7 +19,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+import { ChatLinkState } from "~/types/ChatLinkState";
+
 export default definePayloadPlugin((nuxtApp) => {
-    definePayloadReducer('JSONifiable', data => data && typeof data === 'object' && JSON.stringify(data))
-    definePayloadReviver('JSONifiable', data => JSON.parse(data))
+    definePayloadReducer('ChatLinkState', data => data && data instanceof ChatLinkState && JSON.stringify(data))
+    definePayloadReviver('ChatLinkState', data => JSON.parse(data))
 })
