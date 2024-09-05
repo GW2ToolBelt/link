@@ -16,7 +16,7 @@
     "@nuxtjs/i18n": "^8.5.2",
     "@playwright/test": "^1.46.1",
     "@types/node": "18.19.50",
-    "nuxt": "^3.13.0",
+    "nuxt": "^3.13.1",
     "rollup": "^4.21.2",
     "sass": "^1.78.0",
     "typescript": "5.5.4",
