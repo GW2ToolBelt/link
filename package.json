@@ -27,5 +27,6 @@
   },
   "dependencies": {
     "gw2e-chat-codes": "^1.4.2"
-  }
+  },
+  "packageManager": "yarn@4.5.0"
 }
