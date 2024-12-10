@@ -98,6 +98,15 @@ useHead({
     title
 });
 
+const headers = useRequestHeaders()
+
+useServerSeoMeta({
+    ogType: "article",
+    ogTitle: "Test",
+    ogDescription: "A\n\n\nB\n\n\nC",
+    ogImage: `https://${headers.host}/data/placeholder.png`
+});
+
 const chatLink = useChatLink();
 
 function copyChatLink() {
