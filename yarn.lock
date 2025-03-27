@@ -1894,12 +1894,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:22.13.13":
-  version: 22.13.13
-  resolution: "@types/node@npm:22.13.13"
+"@types/node@npm:22.13.14":
+  version: 22.13.14
+  resolution: "@types/node@npm:22.13.14"
   dependencies:
     undici-types: "npm:~6.20.0"
-  checksum: 10c0/daf792ba5dcff1316abf4b33680f94b792f8d54d6ae495efc8929531e0ba1284a248d29aab117d2259f9280284d986ad5799b193b0516e2b926d713aab835f7d
+  checksum: 10c0/fa2ab5b8277bfbcc86c42e46a3ea9871b0d559894cc9d955685d17178c9499f0b1bf03d1d1ea8d92ef2dda818988f4035acb8abf9dc15423a998fa56173ab804
   languageName: node
   linkType: hard
 
@@ -4503,7 +4503,7 @@ __metadata:
     "@nuxtjs/color-mode": "npm:^3.5.1"
     "@nuxtjs/i18n": "npm:^9.1.1"
     "@playwright/test": "npm:^1.47.1"
-    "@types/node": "npm:22.13.13"
+    "@types/node": "npm:22.13.14"
     gw2e-chat-codes: "npm:^1.4.2"
     nuxt: "npm:^3.13.1"
     rollup: "npm:^4.21.3"
