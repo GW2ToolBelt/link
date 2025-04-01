@@ -15,7 +15,7 @@
     "@nuxtjs/color-mode": "^3.5.1",
     "@nuxtjs/i18n": "^9.1.1",
     "@playwright/test": "^1.47.1",
-    "@types/node": "22.13.16",
+    "@types/node": "22.13.17",
     "nuxt": "^3.13.1",
     "rollup": "^4.21.3",
     "sass": "^1.78.0",
