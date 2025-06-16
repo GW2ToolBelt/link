@@ -1755,8 +1755,8 @@ __metadata:
   linkType: hard
 
 "@rollup/plugin-commonjs@npm:^28.0.3":
-  version: 28.0.3
-  resolution: "@rollup/plugin-commonjs@npm:28.0.3"
+  version: 28.0.5
+  resolution: "@rollup/plugin-commonjs@npm:28.0.5"
   dependencies:
     "@rollup/pluginutils": "npm:^5.0.1"
     commondir: "npm:^1.0.1"
@@ -1770,7 +1770,7 @@ __metadata:
   peerDependenciesMeta:
     rollup:
       optional: true
-  checksum: 10c0/0dbc61a5a894cdf526c3f0a738243cf1b3f634d592db0f2b9cad8c5d8e4c3e645d9b7ac19761c07a8a475118cafa6cdef4746111019388dd6e962f7373878ea4
+  checksum: 10c0/257b53477bcd3f1ec9e7105aa18d9529bb6b5e737cd365010ff08048657ee38457c996577e8982a9a9a285a9f15947462f048c191b03d2e0ab17b3b15dcd5162
   languageName: node
   linkType: hard
 
@@ -2417,42 +2417,42 @@ __metadata:
   linkType: hard
 
 "@vue/devtools-core@npm:^7.7.6":
-  version: 7.7.6
-  resolution: "@vue/devtools-core@npm:7.7.6"
+  version: 7.7.7
+  resolution: "@vue/devtools-core@npm:7.7.7"
   dependencies:
-    "@vue/devtools-kit": "npm:^7.7.6"
-    "@vue/devtools-shared": "npm:^7.7.6"
+    "@vue/devtools-kit": "npm:^7.7.7"
+    "@vue/devtools-shared": "npm:^7.7.7"
     mitt: "npm:^3.0.1"
     nanoid: "npm:^5.1.0"
     pathe: "npm:^2.0.3"
     vite-hot-client: "npm:^2.0.4"
   peerDependencies:
     vue: ^3.0.0
-  checksum: 10c0/7d36f8a179b80c55fe25baf8924edd464000d0bdb55a50405b639588b47a6a8c1ccca503346cc23d6d51241c5fbbb792fe07a5a9b3deec90e7f294f55dacdca5
+  checksum: 10c0/b66dd8ad5a881feca35ed73a9b18486d2e84f14a175d8eddc4b52152a38b0712b134992395f7b6ea505a360dfb71290df3f7b9300f851d8cb246bb8df80198db
   languageName: node
   linkType: hard
 
-"@vue/devtools-kit@npm:^7.7.6":
-  version: 7.7.6
-  resolution: "@vue/devtools-kit@npm:7.7.6"
+"@vue/devtools-kit@npm:^7.7.6, @vue/devtools-kit@npm:^7.7.7":
+  version: 7.7.7
+  resolution: "@vue/devtools-kit@npm:7.7.7"
   dependencies:
-    "@vue/devtools-shared": "npm:^7.7.6"
+    "@vue/devtools-shared": "npm:^7.7.7"
     birpc: "npm:^2.3.0"
     hookable: "npm:^5.5.3"
     mitt: "npm:^3.0.1"
     perfect-debounce: "npm:^1.0.0"
     speakingurl: "npm:^14.0.1"
     superjson: "npm:^2.2.2"
-  checksum: 10c0/8025e894207ae0d8a4e82965a9a0ca7c5a3e98b3540616dc7f5de19af7fbfedc2398913786cf129f89509a7be2b0a18f8913682fa9a15669e748834ea2843546
+  checksum: 10c0/78a6048af4b6b5f9c42ac2e415f3455792e20467ff9a96b3db02b6df108740e3f90c89bdf607f1bb44e13dd77ba007e6bc1f6ce44cb53b26286635a2706ecdcf
   languageName: node
   linkType: hard
 
-"@vue/devtools-shared@npm:^7.7.6":
-  version: 7.7.6
-  resolution: "@vue/devtools-shared@npm:7.7.6"
+"@vue/devtools-shared@npm:^7.7.7":
+  version: 7.7.7
+  resolution: "@vue/devtools-shared@npm:7.7.7"
   dependencies:
     rfdc: "npm:^1.4.1"
-  checksum: 10c0/4087bb9fbdb265c489e73452238062815a98f3cdc1c8816ed7a7a3a0c8f904802906a84fc9c6deccec3cec3a2f577ee871d24c2496b7b7e950fec6f5650e9117
+  checksum: 10c0/f29df17a6f5e92f6c33477279e0a22cb986fc413504918b58cf7d9fb4d541ea9e3163a947cf63212dfc19dd30351abfe1de39a8907bfef446ed02f03c06a24c9
   languageName: node
   linkType: hard
 
@@ -2818,9 +2818,9 @@ __metadata:
   linkType: hard
 
 "birpc@npm:^2.0.19, birpc@npm:^2.3.0":
-  version: 2.3.0
-  resolution: "birpc@npm:2.3.0"
-  checksum: 10c0/82489bcfa1c0a669bf4e5a15fa72691e8bda35abeac8860044eeffdcbc05da200b4349711a4beccdb2d0b90c40d752b0c7fcf01462bcfcb38ae9bd2b034ed339
+  version: 2.4.0
+  resolution: "birpc@npm:2.4.0"
+  checksum: 10c0/6ecda217b540189221913f215055baf4f10f264a1a8f0000ef6db3ecb0ccc5e4fde135b5f0719c389f1a593e64af3041404019711225ab31badf23c2a98d7778
   languageName: node
   linkType: hard
 
@@ -8648,8 +8648,8 @@ __metadata:
   linkType: hard
 
 "vite-plugin-inspect@npm:^11.1.0":
-  version: 11.1.0
-  resolution: "vite-plugin-inspect@npm:11.1.0"
+  version: 11.2.0
+  resolution: "vite-plugin-inspect@npm:11.2.0"
   dependencies:
     ansis: "npm:^3.17.0"
     debug: "npm:^4.4.1"
@@ -8665,7 +8665,7 @@ __metadata:
   peerDependenciesMeta:
     "@nuxt/kit":
       optional: true
-  checksum: 10c0/f49a7f23388c7a81f5a7b7e5572874c0de170cebcf527d04a2ad71aea63da4f8e5756febdec941eb8bfcb4f1df2e80c5a3cda2501ebf3b6100a23a06639452df
+  checksum: 10c0/896d00ab38078dae2f4091769ff31ba73e0f22a6bb8394328999f2cc1c3125914038a9ea641e591931969802d254d49249c2d312ca3a50fe1ea084f09b8b8386
   languageName: node
   linkType: hard
 
