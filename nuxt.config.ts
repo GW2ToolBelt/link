@@ -24,14 +24,11 @@ export default defineNuxtConfig ({
 
     i18n: {
         locales: [
-            { code: "de", file: "de-DE.json", iso: "de-DE" },
-            { code: "en", file: "en-US.json", iso: "en-US" },
-            // { code: "es", file: "es-ES.json", iso: "es-ES" },
-            // { code: "fr", file: "fr-FR.json", iso: "fr-FR" }
+            { code: "de", file: "de-DE.json", language: "de-DE" },
+            { code: "en", file: "en-US.json", language: "en-US" },
+            // { code: "es", file: "es-ES.json", language: "es-ES" },
+            // { code: "fr", file: "fr-FR.json", language: "fr-FR" }
         ],
-        lazy: true,
-        langDir: "lang",
-        restructureDir: false,
         defaultLocale: "en",
         strategy: "no_prefix",
 
