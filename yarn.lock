@@ -8395,8 +8395,8 @@ __metadata:
   linkType: hard
 
 "vuetify@npm:^4.0.0":
-  version: 4.3.1
-  resolution: "vuetify@npm:4.3.1"
+  version: 4.3.3
+  resolution: "vuetify@npm:4.3.3"
   dependencies:
     "@vuetify/v0": "npm:^1.2.3"
   peerDependencies:
@@ -8411,7 +8411,7 @@ __metadata:
       optional: true
     webpack-plugin-vuetify:
       optional: true
-  checksum: 10c0/08e621b1eed3bcb4990eab1a047b094c58c73cb5ac1f520c8dcaa9ce1eb3e2eb056a54e2691ef84475fb207d67f4a9561ee9d16e714d0fda11b1cac68d9af49d
+  checksum: 10c0/5fe6b49279341252409979c4e10770af0281210cd4d74f22f3c34abaad24d7ece606b31d01197d8aadd61423fe2356863f716114146887fbee48632724f3bc7c
   languageName: node
   linkType: hard
 
